@@ -5,6 +5,14 @@ VisualStudioVersion = 17.10.35013.160
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CrossCutting", "CrossCutting\CrossCutting.csproj", "{0241204E-6076-4BF3-BE60-D9255D773E18}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{66D9494F-BB3B-4188-86D4-249AD9FB46B0}"
+	ProjectSection(SolutionItems) = preProject
+		LICENSE.md = LICENSE.md
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrossCutting.Tests", "CrossCutting.Tests\CrossCutting.Tests.csproj", "{4FC8A158-389C-482B-A3D0-06F08859CAB9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +23,10 @@ Global
 		{0241204E-6076-4BF3-BE60-D9255D773E18}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0241204E-6076-4BF3-BE60-D9255D773E18}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0241204E-6076-4BF3-BE60-D9255D773E18}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4FC8A158-389C-482B-A3D0-06F08859CAB9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4FC8A158-389C-482B-A3D0-06F08859CAB9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4FC8A158-389C-482B-A3D0-06F08859CAB9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4FC8A158-389C-482B-A3D0-06F08859CAB9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

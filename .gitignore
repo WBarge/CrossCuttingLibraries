@@ -4,3 +4,7 @@ _ReSharper.Caches/
 .vs/
 
 CrossCutting/obj/
+
+CrossCutting/bin/
+
+CrossCutting.sln.DotSettings.user
