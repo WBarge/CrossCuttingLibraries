@@ -11,6 +11,7 @@
 // <summary></summary>
 // ***********************************************************************
 using CrossCutting.Exceptions;
+using JetBrains.Annotations;
 
 namespace CrossCutting.Extensions
 {
@@ -24,6 +25,7 @@ namespace CrossCutting.Extensions
         /// </summary>
         /// <param name="g">guid to be checked</param>
         /// <returns>true if the g is null or == Guid.Empty</returns>
+        [ContractAnnotation("null => false")]
         public static bool IsEmpty(this Guid g)
         {
             return ((object)g).IsEmpty() || g == Guid.Empty;
@@ -34,6 +36,7 @@ namespace CrossCutting.Extensions
         /// </summary>
         /// <param name="obj">The object.</param>
         /// <returns>true if the Guid is not empty.</returns>
+        [ContractAnnotation("null => false")]
         public static bool IsNotEmpty(this Guid obj)
         {
             return (!obj.IsEmpty());

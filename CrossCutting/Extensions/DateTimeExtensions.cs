@@ -10,6 +10,9 @@
 // </copyright>
 // <summary></summary>
 // ***********************************************************************
+
+using JetBrains.Annotations;
+
 namespace CrossCutting.Extensions
 {
     /// <summary>
@@ -22,6 +25,7 @@ namespace CrossCutting.Extensions
         /// </summary>
         /// <param name="obj">datetime to be checked.</param>
         /// <returns>true if the obj is null or == DateTime.MinValue or == DateTime.MaxValue, else false.</returns>
+        [ContractAnnotation("null => false")]
         public static bool IsEmpty(this DateTime obj)
         {
             return ((object)obj).IsEmpty() || obj == DateTime.MinValue || obj == DateTime.MaxValue;
@@ -32,6 +36,7 @@ namespace CrossCutting.Extensions
         /// </summary>
         /// <param name="obj">The object.</param>
         /// <returns>true if the System.DateTime is not empty.</returns>
+        [ContractAnnotation("null => false")]
         public static bool IsNotEmpty(this DateTime obj)
         {
             return (!obj.IsEmpty());
@@ -42,6 +47,7 @@ namespace CrossCutting.Extensions
         /// </summary>
         /// <param name="obj">The object.</param>
         /// <returns><c>true</c> if the specified object is empty; otherwise, <c>false</c>.</returns>
+        [ContractAnnotation("null => false")]
         public static bool IsEmpty(this DateTime? obj)
         {
             return !obj.HasValue || obj.Value.IsEmpty();
@@ -52,6 +58,7 @@ namespace CrossCutting.Extensions
         /// </summary>
         /// <param name="obj">The object.</param>
         /// <returns><c>true</c> if [is not empty] [the specified object]; otherwise, <c>false</c>.</returns>
+        [ContractAnnotation("null => false")]
         public static bool IsNotEmpty(this DateTime? obj)
         {
             return (!obj.IsEmpty());

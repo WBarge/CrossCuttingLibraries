@@ -11,6 +11,7 @@
 // <summary></summary>
 // ***********************************************************************
 using CrossCutting.Exceptions;
+using JetBrains.Annotations;
 
 namespace CrossCutting.Extensions
 {
@@ -24,6 +25,7 @@ namespace CrossCutting.Extensions
         /// </summary>
         /// <param name="obj">The object.</param>
         /// <returns>true if the object is null else false.</returns>
+        [ContractAnnotation("null => false")]
         public static bool IsEmpty(this object? obj)
         {
             return (obj == null);
@@ -34,6 +36,7 @@ namespace CrossCutting.Extensions
         /// </summary>
         /// <param name="o">Object to be checked.</param>
         /// <returns>true if the object is not empty, else false.</returns>
+        [ContractAnnotation("null => false")]
         public static bool IsNotEmpty(this object? o)
         {
             return !o.IsEmpty();

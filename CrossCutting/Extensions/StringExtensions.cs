@@ -14,6 +14,7 @@ using System.Globalization;
 using System.Text;
 using System.Text.RegularExpressions;
 using CrossCutting.Exceptions;
+using JetBrains.Annotations;
 
 namespace CrossCutting.Extensions
 {
@@ -72,6 +73,7 @@ namespace CrossCutting.Extensions
         /// </summary>
         /// <param name="s">The string to examine.</param>
         /// <returns><c>true</c> if the specified string is empty or null; otherwise, <c>false</c>.</returns>
+        [ContractAnnotation("null => false")]
         public static bool IsEmpty(this string s)
         {
             return string.IsNullOrWhiteSpace(s);
@@ -82,6 +84,7 @@ namespace CrossCutting.Extensions
         /// </summary>
         /// <param name="s">The s.</param>
         /// <returns>true if the string is not empty, else false.</returns>
+        [ContractAnnotation("null => false")]
         public static bool IsNotEmpty(this string s)
         {
             return (!s.IsEmpty());

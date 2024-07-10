@@ -4,12 +4,35 @@
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <Authors>Bill Barge</Authors>
+    <Description>A set of Exceptions, Extension methods, and data models to be used across all levels of an application</Description>
+    <Copyright>2024</Copyright>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <RepositoryUrl>https://github.com/WBarge/CrossCuttingLibraries</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <AssemblyVersion>$(VersionPrefix)</AssemblyVersion>
+    <FileVersion>$(VersionPrefix)</FileVersion>
+    <PackageOutputPath>D:\Src\MyNugetLibraries</PackageOutputPath>
+    <PackageId>My.$(AssemblyName).Libraries</PackageId>
+    <Title>My Cross Cutting Libraries</Title>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <ItemGroup>
     <Compile Remove="_ReSharper.Caches\**" />
     <EmbeddedResource Remove="_ReSharper.Caches\**" />
     <None Remove="_ReSharper.Caches\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="JetBrains.Annotations" Version="2024.2.0" />
   </ItemGroup>
 
 </Project>

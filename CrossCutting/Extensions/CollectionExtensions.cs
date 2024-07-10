@@ -10,6 +10,9 @@
 // </copyright>
 // <summary></summary>
 // ***********************************************************************
+
+using JetBrains.Annotations;
+
 namespace CrossCutting.Extensions
 {
     /// <summary>
@@ -23,6 +26,7 @@ namespace CrossCutting.Extensions
         /// <typeparam name="T"></typeparam>
         /// <param name="obj">The object.</param>
         /// <returns><c>true</c> if the specified object is empty; otherwise, <c>false</c>.</returns>
+        [ContractAnnotation("null => false")]
         public static bool IsEmpty<T>(this IEnumerable<T> obj)
         {
             return ((object)obj).IsEmpty() || !obj.Any();
@@ -34,6 +38,7 @@ namespace CrossCutting.Extensions
         /// <typeparam name="T"></typeparam>
         /// <param name="obj">The object.</param>
         /// <returns><c>true</c> if [is not empty] [the specified object]; otherwise, <c>false</c>.</returns>
+        [ContractAnnotation("null => false")]
         public static bool IsNotEmpty<T>(this IEnumerable<T> obj)
         {
             return (!obj.IsEmpty());
