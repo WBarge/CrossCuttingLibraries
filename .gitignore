@@ -8,3 +8,7 @@ CrossCutting/obj/
 CrossCutting/bin/
 
 CrossCutting.sln.DotSettings.user
+
+CrossCutting.Tests/bin/
+
+CrossCutting.Tests/obj/
