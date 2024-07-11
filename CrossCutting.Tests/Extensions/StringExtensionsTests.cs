@@ -195,5 +195,14 @@ namespace CrossCutting.Tests.Extensions
             byte[] result = testData.ToByteArray();
             result.Should().BeEquivalentTo(test);
         }
+
+        [Test, Description("Test to see truncation happens")]
+        public void Truncate_ShouldCutStringShort_Success()
+        {
+            string testData = "testValue";
+            string result = testData.Truncate(4);
+            result.Should().HaveLength(4);
+            result.Should().Be("test");
+        }
     }
 }

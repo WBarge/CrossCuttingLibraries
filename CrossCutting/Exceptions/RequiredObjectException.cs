@@ -15,6 +15,8 @@
 // 
 // ***********************************************************************
 
+using System;
+
 namespace CrossCutting.Exceptions
 {
     /// <summary>

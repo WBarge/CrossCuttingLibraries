@@ -16,6 +16,7 @@
     <PackageId>My.$(AssemblyName).Libraries</PackageId>
     <Title>My Cross Cutting Libraries</Title>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Version>1.0.0.1</Version>
   </PropertyGroup>
 
   <ItemGroup>

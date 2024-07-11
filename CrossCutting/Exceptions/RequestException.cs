@@ -12,6 +12,9 @@
 //      This is a domain specific error and is encoded so a centralized error handling mechanism can be created at the highest level of the application.
 // </summary>
 // ***********************************************************************
+
+using System;
+
 namespace CrossCutting.Exceptions
 {
     /// <summary>

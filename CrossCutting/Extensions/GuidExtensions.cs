@@ -10,6 +10,8 @@
 // </copyright>
 // <summary></summary>
 // ***********************************************************************
+
+using System;
 using CrossCutting.Exceptions;
 using JetBrains.Annotations;
 

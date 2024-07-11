@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "CrossCutting.Tests": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "VersionPrefix": "1.0.0.1"
+      }
+    }
+  }
+}

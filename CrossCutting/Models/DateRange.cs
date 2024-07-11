@@ -11,6 +11,7 @@
 // <summary></summary>
 // ***********************************************************************
 
+using System;
 using System.Diagnostics.CodeAnalysis;
 using System.Dynamic;
 using CrossCutting.Extensions;

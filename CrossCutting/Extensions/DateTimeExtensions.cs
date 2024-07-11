@@ -11,6 +11,7 @@
 // <summary></summary>
 // ***********************************************************************
 
+using System;
 using JetBrains.Annotations;
 
 namespace CrossCutting.Extensions

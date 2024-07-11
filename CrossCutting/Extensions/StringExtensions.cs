@@ -10,7 +10,11 @@
 // </copyright>
 // <summary></summary>
 // ***********************************************************************
+
+using System;
+using System.Collections.Generic;
 using System.Globalization;
+using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using CrossCutting.Exceptions;
@@ -185,6 +189,19 @@ namespace CrossCutting.Extensions
                 string msg = name.IsEmpty() ? "" : $"{name} is required";
                 throw new RequiredObjectException(msg);
             }
+        }
+
+        /// <summary>
+        /// Truncates the specified maximum size.
+        /// </summary>
+        /// <param name="stringToTruncate">The string to truncate.</param>
+        /// <param name="maxSize">The maximum size.</param>
+        /// <returns>System.String.</returns>
+        public static string Truncate(this string stringToTruncate, int maxSize)
+        {
+            return (string.IsNullOrEmpty(stringToTruncate) || stringToTruncate.Length < maxSize)
+                ? stringToTruncate
+                : stringToTruncate[..maxSize];//new way of doing substring(0,MAX_SIZE)
         }
 
     }
