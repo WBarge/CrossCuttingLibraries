@@ -12,7 +12,7 @@
     <RepositoryType>git</RepositoryType>
     <AssemblyVersion>$(VersionPrefix)</AssemblyVersion>
     <FileVersion>$(VersionPrefix)</FileVersion>
-    <PackageOutputPath>D:\Src\MyNugetLibraries</PackageOutputPath>
+    <PackageOutputPath>C:\LocalNugetLibraries</PackageOutputPath>
     <PackageId>My.$(AssemblyName).Libraries</PackageId>
     <Title>My Cross Cutting Libraries</Title>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
